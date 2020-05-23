@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func ExampleStudymake() {
+func ExamplestudyMake() {
 	studyMake()
 	// Output:
 	// [0 0 0 0 0]
@@ -46,11 +46,16 @@ func Example() {
 
 	updateSlice(sl1)
 	fmt.Printf("len is %d ,cap is %d,  slice is %v\n", len(sl1), cap(sl1), sl1)
+	
+	sl1 = append(sl1, 111)
+	sl1 = append(sl1, 222)
+	sl1 = append(sl1, 333)
+	fmt.Printf("len is %d ,cap is %d,  slice is %v\n", len(sl1), cap(sl1), sl1)
 	// Output:
 	// len is 5 ,cap is 5,  slice is [1 2 3 4 5]
 	// len is 3 ,cap is 4,  slice is [2 3 4]
 	// len is 6 ,cap is 60,  slice is [0 0 0 0 0 0]
 	// len is 5 ,cap is 5,  slice is [1 2 3 4 5]
 	// len is 3 ,cap is 4,  slice is [2 99 4]
-
+	// len is 6 ,cap is 8,  slice is [2 99 4 111 222 333]
 }
