@@ -14,11 +14,11 @@ func TestFoo(t *testing.T) {
 
 func BenchmarkFoo(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		fmt.Sprintf("hello")
+		fmt.Printf("hello")
 	}
 }
 
-func ExampleSqrt() {
+func Example() {
 	if true {
 		fmt.Println("hello world")
 	} else {
@@ -46,7 +46,7 @@ func swap2(x, y *int) {
 	*y = temp
 }
 
-func ExampleSwap() {
+func Exampleswap1() {
 	var x, y = 3, 9
 	fmt.Println(x, y)
 	swap0(x, y)
@@ -80,16 +80,13 @@ func swapIntclass2(x, y *intclass) {
 	y.value = temp
 }
 
-func ExampleSwapIntClass() {
+func ExampleswapIntclass() {
 	var x, y = intclass{3}, intclass{9}
 	fmt.Println(x.value, y.value)
 	swapIntclass(x, y)
 	fmt.Println(x.value, y.value)
 	swapIntclass2(&x, &y)
 	fmt.Println(x.value, y.value)
-	usr := user{
-		Name: "nike",
-	}
 	//Output:
 	//3 9
 	//3 9
