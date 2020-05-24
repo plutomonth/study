@@ -28,18 +28,12 @@ func getSequence(step int) func() int {
 	}
 }
 
-func main() {
-	studyMake()
-	fmt.Println("math.Sqrt(17)  =", math.Sqrt(17))
-
-	varSqrtFunc := func(value float64) float64 {
-		return math.Sqrt(value)
+// Sum method
+func Sum(list []float64) float64 {
+	size := len(list)
+	sum := 0.0
+	for i:= 0; i<size; i++ {
+		sum += list[i]
 	}
-	fmt.Println("varSqrtFunc(17)=", varSqrtFunc(17))
-
-	nextValue := getSequence(2)
-	fmt.Println(nextValue())
-	fmt.Println(nextValue())
-	fmt.Println(getSequence(3)())
-	fmt.Println(getSequence(4)())
+	return sum
 }

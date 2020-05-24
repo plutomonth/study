@@ -35,7 +35,7 @@ func swap0(x, y int) {
 	y = temp
 }
 
-func swap1(x, y int) (int, int) {
+func Swap1(x, y int) (int, int) {
 	return y, x
 }
 
@@ -46,12 +46,12 @@ func swap2(x, y *int) {
 	*y = temp
 }
 
-func Exampleswap1() {
+func ExampleSwap1() {
 	var x, y = 3, 9
 	fmt.Println(x, y)
 	swap0(x, y)
 	fmt.Println(x, y)
-	x, y = swap1(x, y)
+	x, y = Swap1(x, y)
 	fmt.Println(x, y)
 	swap2(&x, &y)
 	fmt.Println(x, y)
@@ -66,26 +66,26 @@ type intclass struct {
 	value int
 }
 
-func swapIntclass(x, y intclass) {
+func SwapIntclass(x, y intclass) {
 	var temp int
 	temp = x.value
 	x.value = y.value
 	y.value = temp
 }
 
-func swapIntclass2(x, y *intclass) {
+func SwapIntclass2(x, y *intclass) {
 	var temp int
 	temp = x.value
 	x.value = y.value
 	y.value = temp
 }
 
-func ExampleswapIntclass() {
+func ExampleSwapIntclass() {
 	var x, y = intclass{3}, intclass{9}
 	fmt.Println(x.value, y.value)
-	swapIntclass(x, y)
+	SwapIntclass(x, y)
 	fmt.Println(x.value, y.value)
-	swapIntclass2(&x, &y)
+	SwapIntclass2(&x, &y)
 	fmt.Println(x.value, y.value)
 	//Output:
 	//3 9

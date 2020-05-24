@@ -31,6 +31,14 @@ func updateSlice(slice []int) {
 	}
 }
 
+func ExampleSum() {
+	list1 := []float64 {2.3, 4.5, 1.2, 4.5, 5.6}
+	fmt.Printf("sum is %f\n", Sum(list1))
+	// Output:
+	// sum is 18.100000
+}
+
+
 func Example() {
 	var arr1 = [...]int{1, 2, 3, 4, 5}
 	fmt.Printf("len is %d ,cap is %d,  slice is %v\n", len(arr1), cap(arr1), arr1)
