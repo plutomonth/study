@@ -33,6 +33,29 @@ func TestFlat(t *testing.T) {
 	}
 }
 
+func TestManager(t *testing.T) {
+	user := User{
+		"John",
+		12,
+	}
+
+	manager := Manager{
+		&user,
+	}
+
+	admin := Admin{
+		user,
+	}
+
+	if manager.Age != 12 {
+		t.Fail()
+	}
+
+	if admin.Age != 12 {
+		t.Fail()
+	}
+}
+
 func Example() {
 	f := flat{
 		Heigth: 8,

@@ -48,3 +48,13 @@ type User struct {
 	Name string `json:"userName"`
 	Age  int    `json:"userAge"`
 }
+
+// Manager type
+type Manager struct {
+	*User
+}
+
+// Admin type
+type Admin struct {
+	User
+}

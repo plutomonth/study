@@ -1,6 +1,7 @@
 package inner
 
 import (
+	"errors"
 	"fmt"
 	"math"
 )
@@ -16,8 +17,11 @@ func studyMake() {
 	fmt.Println(slice3)
 }
 
-func sqrt(value float64) float64 {
-	return math.Sqrt(value)
+func sqrt(value float64) (float64, error) {
+	if value < 0 {
+		return 0, errors.New("math: square root of negative number")
+	}
+	return math.Sqrt(value), nil
 }
 
 func getSequence(step int) func() int {
@@ -32,8 +36,26 @@ func getSequence(step int) func() int {
 func Sum(list []float64) float64 {
 	size := len(list)
 	sum := 0.0
-	for i:= 0; i<size; i++ {
+	for i := 0; i < size; i++ {
 		sum += list[i]
 	}
 	return sum
+}
+
+// SumByRange method
+func SumByRange(list []float64) float64 {
+	sum := 0.0
+	for _, v := range list {
+		sum += v
+	}
+	return sum
+}
+
+// Capitals method
+func Capitals() map[string]string {
+	capitalMap := make(map[string]string)
+	capitalMap["France"] = "Paris"
+	capitalMap["Italy"] = "Rome"
+	capitalMap["Japan"] = "Toyko"
+	return capitalMap
 }
