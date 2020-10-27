@@ -59,3 +59,9 @@ func Capitals() map[string]string {
 	capitalMap["Japan"] = "Toyko"
 	return capitalMap
 }
+
+// Less , the anonymous func 
+var Less = func(a, b int, z float64) bool {
+	return a*b <int(z)
+}
+

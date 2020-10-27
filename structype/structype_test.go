@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"math"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestCircle(t *testing.T) {
@@ -65,4 +67,13 @@ func Example() {
 	// Output:
 	// {"heigth":8,"width":6}
 
+}
+
+func TestAdd(t *testing.T) {
+	var a Integer = 10
+	println("Firt time, return value is ", a.Add(Integer(10)))
+	assert.Equal(t, a, Integer(20))
+
+	println("Second time, return value is ", a.AddByValue(Integer(10)))
+	assert.Equal(t, a, Integer(20))
 }

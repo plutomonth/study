@@ -58,3 +58,18 @@ type Manager struct {
 type Admin struct {
 	User
 }
+
+// Integer type extend inner type int
+type Integer int
+
+// Add two integer value
+func (a *Integer) Add(b Integer) Integer {
+	*a += b
+	return *a
+}
+
+// AddByValue two integer value
+func (a Integer) AddByValue(b Integer) Integer {
+	a += b
+	return a
+}

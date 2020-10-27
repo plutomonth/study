@@ -3,6 +3,8 @@ package inner
 import (
 	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func ExamplestudyMake() {
@@ -106,4 +108,8 @@ func Example() {
 	// len is 5 ,cap is 5,  slice is [1 2 3 4 5]
 	// len is 3 ,cap is 4,  slice is [2 99 4]
 	// len is 6 ,cap is 8,  slice is [2 99 4 111 222 333]
+}
+
+func TestAnonymousFunc(t *testing.T) {
+	assert.True(t, Less(1, 1, 2.0))
 }
